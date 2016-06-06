@@ -7,8 +7,7 @@ use strict 'subs', 'vars';
 
 sub new {
     my $package = shift;
-    die "This class must be subclassed" if $package eq __PACKAGE__;
-    die "Must be subclassed by WordList::MetaSyntactic::*"
+    die "Must be subclassed by WordList::MetaSyntactic::*, not '$package'"
         unless $package =~ /\AWordList::MetaSyntactic::(\w+)\z/;
     require Acme::MetaSyntactic;
     bless [Acme::MetaSyntactic->new($1)], $package;
@@ -57,7 +56,7 @@ Use one of the C<WordList::MetaSyntactic::*> modules.
 
 =head1 DESCRIPTION
 
-B<EXPERIMENTAL>
+B<EXPERIMENTAL, PROOF OF CONCEPT.>
 
 Base class for C<WordList::MetaSyntactic::*> modules.
 <WordList::MetaSyntactic::*> are wordlist modules that get their wordlist from
