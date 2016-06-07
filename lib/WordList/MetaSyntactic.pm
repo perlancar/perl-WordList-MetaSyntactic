@@ -45,7 +45,7 @@ sub all_words {
 }
 
 1;
-# ABSTRACT: Word lists from Acme::MetaSyntactic
+# ABSTRACT: Base class for WordList::MetaSyntactic::*
 
 =for Pod::Coverage ^(.+)$
 
@@ -55,8 +55,6 @@ Use one of the C<WordList::MetaSyntactic::*> modules.
 
 
 =head1 DESCRIPTION
-
-B<EXPERIMENTAL, PROOF OF CONCEPT.>
 
 Base class for C<WordList::MetaSyntactic::*> modules.
 <WordList::MetaSyntactic::*> are wordlist modules that get their wordlist from
